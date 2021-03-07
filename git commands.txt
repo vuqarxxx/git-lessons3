@@ -1,0 +1,76 @@
+$ git status
+$ git pull origin develop
+$ git stash -u
+$ git stash pop
+__________________________________
+cmd file commands
+cd <file name> - go into file
+mkdir <file name> create file
+ls --a  - return folder's children
+cd..  -go back folder
+touch <file name>  - create file
+-----------------------------
+git config commands
+-----------------------------
+git --version  - return git version 
+git config --list  - return git config info
+________________________________________
+
+git commands
+____________________________
+git init  -create git initial files
+git status  -return files current status.
+git add  <file name with extension> - add file to stagion area(alternativ "stage file" in VS)
+git rm --cached <file name> (or git restore --staged <file>) - unstage file
+git add .  -stage all file
+git reset - unstage all file
+git commit -m "commit name"  -commit files to local
+git log -watch commit details
+git log --oneline  -watch commit without details
+git reset <commit id> --hard  -delete last changes from local commit history and files and texts in files which created after this commit
+git reset <commit id> --soft  -delte last changes from local commit history and move them to stage area and any files dont removed u can change and commit them again
+git revert <commit id> - delete only this commit and add revert commit and delete files and changes related this commit
+git commit --amend -m "commit message"  -change last commit's message
+git commit --amend  -open last commit for edit and after changing message and pressing Esc :wq all files in the staging area are automatically commited in last commit
+git branch <branch name>  -create new branch
+git branch -a  - list all branch and show active branch
+git checkout  <branch name>  - switch another branch
+git checkout -b  <branch name>  - create new branch and switch this branch
+git branch -d <branch name> - delete branch
+git branch -D <branch name> - delete branch if not merged changes have in this branch(force delete)
+git merge <branch name>  -mergre two branch
+git branch -m <new branch name>  -change current branch name to <new branch name>
+git remote add origin <https...>  -give name <http> remote git hub link
+git remote -v   -show remote connections' links
+git push <http...> <branch name> -push to <branch name> current changes
+git push origin <branch name> -push to <branch name> current changes
+git fetch origin   - get new changes from remote branches and you must merge these code below
+git merge origin/<remote branch name>  - merge  all remote branches changes which gotten fetch command with current branch 
+git pull origin <branch name> -get and merge <branch name> to current branch
+git stash save 'stash name' -save file for feature modification
+git stash show -p -show last stashed file
+git stash show -p <index (0,1,...)>-show stashed file by index
+git stash list   -show all stashes
+git stash drop   - delete stash with files (these files will not be recovered)
+git stash pop  -unstash top stash
+git stash pop <index>  -unstash stash by index
+git diff - show difference between changes which file and  stage or commited stage
+git checkout -- <file name>  - delete last changes
+git push --force origin <branch name>   -change pushed commit name
+git rebase -i HEAD~n   -change any commit name, n is number of commits count
+
+
+
+test
+
+
+
+
+
+
+
+
+
+
+
+
